@@ -1,7 +1,8 @@
 import React from "react";
 import { CssBaseline, Grid } from "@material-ui/core";
 import Header from "./components/Header/Header";
-import List from "@material-ui/core/List";
+
+import List from "./List/List";
 // import PlaceDetails from "./PlaceDetails/PlaceDetails";
 import Map from "./Map/Map";
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
         <Grid item xs={12} md={4}>
           <List />
         </Grid>
+
         <Grid
           item
           xs={12}
