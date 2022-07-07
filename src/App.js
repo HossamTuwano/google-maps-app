@@ -20,10 +20,11 @@ const App = () => {
   });
 
   useEffect(() => {
-    console.log(bounds);
-    getPlacesData(bounds.sw, bounds.ne).then((data) => {
-      setPlaces(data);
-    });
+    if (bounds) {
+      getPlacesData(bounds.sw, bounds.ne).then((data) => {
+        setPlaces(data);
+      });
+    }
   }, [coordinates, bounds]);
 
   return (
@@ -38,7 +39,7 @@ const App = () => {
         <Grid
           item
           xs={12}
-          md={8}           
+          md={8}
           style={{
             display: "flex",
             justifyContent: "center",
